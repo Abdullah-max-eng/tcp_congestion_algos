@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 
 # === Settings ===
-filename = "h1_vegs_81ms.txt"
+filename = "h2_vegas_81ms.txt"
 flow_label = "TCP Flow 1 (h1 → r1)"
 time_limit = 2000  # <<< Edit this number to change how many seconds you want to display
 

@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 
 # === Your log files ===
-h1_file = "h1_vegas_81ms.txt"
+h1_file = "h1_vegs_81ms.txt"
 h2_file = "h2_vegas_81ms.txt"
 
 # === Choose how many seconds to show on the X-axis ===
