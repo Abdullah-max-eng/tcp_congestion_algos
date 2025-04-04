@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 
 # === Edit this for the file you want to plot ===
-filename = "h1_bbr_162ms.txt"
+filename = "h2_bbr_162ms.txt"
 flow_label = "TCP Flow 1 (h1 → r1)"
 
 # === Parse iperf3 output ===
