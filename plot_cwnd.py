@@ -1,8 +1,8 @@
 import matplotlib.pyplot as plt
 
 # === Edit these to match your file names ===
-h1_file = "h1_bbr_162ms.txt"
-h2_file = "h2_bbr_162ms.txt"
+h1_file = "h1_vegs_81ms.txt"
+h2_file = "h2_vegas_81ms.txt"
 
 # === Function to extract time and CWND from iperf3 output ===
 def parse_cwnd(filename):
@@ -44,7 +44,7 @@ plt.plot(t1, cwnd1, label="TCP Flow 1 (h1 → r1)", color='blue',
 plt.plot(t2, cwnd2, label="TCP Flow 2 (h2 → r2)", color='orange',
          linewidth=1, marker='s', markersize=4, markerfacecolor='none', alpha=0.7, linestyle='-')
 
-plt.title("CWND vs Time for Two TCP Flows (BBR - 162ms)", fontsize=14, fontweight='bold')
+plt.title("CWND vs Time for Two TCP Flows (vegas - 81ms)", fontsize=14, fontweight='bold')
 plt.xlabel("Time (seconds)", fontsize=12)
 plt.ylabel("Congestion Window (packets)", fontsize=12)
 plt.grid(True, linestyle='--', alpha=0.3)
@@ -55,5 +55,5 @@ plt.tight_layout()
 plt.xlim(0, max(max(t1, default=0), max(t2, default=0)) + 50)
 plt.ylim(0, max(max(cwnd1, default=0), max(cwnd2, default=0)) + 500)
 
-plt.savefig("cwnd_bbr_162ms_clearer.png", dpi=300)
+plt.savefig("cwnd_vegas_81ms_clearer.png", dpi=300)
 plt.show()

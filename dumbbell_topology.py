@@ -16,9 +16,9 @@ class DumbbellTopo(Topo):
 
         self.addLink(h1, s1)
         self.addLink(h2, s2)
-        self.addLink(s1, r1, cls=TCLink, bw=10, delay='162ms')
-        self.addLink(s2, r2, cls=TCLink, bw=10, delay='162ms')
-        self.addLink(r1, r2, cls=TCLink, bw=10, delay='162ms')
+        self.addLink(s1, r1, cls=TCLink, bw=10, delay='81ms', max_queue_size=100)
+        self.addLink(s2, r2, cls=TCLink, bw=10, delay='81ms', max_queue_size=100)
+        self.addLink(r1, r2, cls=TCLink, bw=10, delay='81ms', max_queue_size=100)
 
 def run():
     topo = DumbbellTopo()

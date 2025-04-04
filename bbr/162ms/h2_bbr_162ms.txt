@@ -1977,4 +1977,31 @@ Connecting to host 10.0.0.4, port 5201
 [  5] 1973.00-1974.00 sec  0.00 Bytes  0.00 bits/sec    0    775 KBytes       
 [  5] 1974.00-1975.00 sec  3.25 MBytes  27.3 Mbits/sec    0    775 KBytes       
 [  5] 1975.00-1976.00 sec  0.00 Bytes  0.00 bits/sec    0    775 KBytes       
-[  5] 1976.00-1977.00 sec  0.00 Bytes  0.00 bits/sec 
+[  5] 1976.00-1977.00 sec  0.00 Bytes  0.00 bits/sec    0    775 KBytes       
+[  5] 1977.00-1978.00 sec  3.38 MBytes  28.3 Mbits/sec    0    778 KBytes       
+[  5] 1978.00-1979.00 sec  0.00 Bytes  0.00 bits/sec    0    775 KBytes       
+[  5] 1979.00-1980.00 sec  0.00 Bytes  0.00 bits/sec    0   5.66 KBytes       
+[  5] 1980.00-1981.00 sec  0.00 Bytes  0.00 bits/sec    0    775 KBytes       
+[  5] 1981.00-1982.00 sec  3.25 MBytes  27.3 Mbits/sec    0    775 KBytes       
+[  5] 1982.00-1983.00 sec  0.00 Bytes  0.00 bits/sec    0    775 KBytes       
+[  5] 1983.00-1984.00 sec  3.25 MBytes  27.3 Mbits/sec    0    775 KBytes       
+[  5] 1984.00-1985.00 sec  0.00 Bytes  0.00 bits/sec    0    778 KBytes       
+[  5] 1985.00-1986.00 sec  0.00 Bytes  0.00 bits/sec    0    775 KBytes       
+[  5] 1986.00-1987.00 sec  3.38 MBytes  28.3 Mbits/sec    0    775 KBytes       
+[  5] 1987.00-1988.00 sec  0.00 Bytes  0.00 bits/sec    0    775 KBytes       
+[  5] 1988.00-1989.00 sec  0.00 Bytes  0.00 bits/sec    0    775 KBytes       
+[  5] 1989.00-1990.00 sec  3.25 MBytes  27.3 Mbits/sec    0    778 KBytes       
+[  5] 1990.00-1991.00 sec  0.00 Bytes  0.00 bits/sec    0    775 KBytes       
+[  5] 1991.00-1992.00 sec  0.00 Bytes  0.00 bits/sec    0    775 KBytes       
+[  5] 1992.00-1993.00 sec  3.38 MBytes  28.3 Mbits/sec    0    778 KBytes       
+[  5] 1993.00-1994.00 sec  0.00 Bytes  0.00 bits/sec    0    775 KBytes       
+[  5] 1994.00-1995.00 sec  0.00 Bytes  0.00 bits/sec    0    775 KBytes       
+[  5] 1995.00-1996.00 sec  3.25 MBytes  27.3 Mbits/sec    0    778 KBytes       
+[  5] 1996.00-1997.00 sec  0.00 Bytes  0.00 bits/sec    0    778 KBytes       
+[  5] 1997.00-1998.00 sec  0.00 Bytes  0.00 bits/sec    0    781 KBytes       
+[  5] 1998.00-1999.00 sec  3.25 MBytes  27.3 Mbits/sec    0    775 KBytes       
+[  5] 2000.00-4347.62 sec  0.00 Bytes  0.00 bits/sec    0    775 KBytes       
+- - - - - - - - - - - - - - - - - - - - - - - - -
+[ ID] Interval           Transfer     Bitrate         Retr
+[  5]   0.00-4347.62 sec  2.15 GBytes  4.24 Mbits/sec    0             sender
+[  5]   0.00-4347.62 sec  0.00 Bytes  0.00 bits/sec                  receiver

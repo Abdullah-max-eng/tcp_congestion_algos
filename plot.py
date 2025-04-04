@@ -1,8 +1,9 @@
 import matplotlib.pyplot as plt
 
-# === Edit this for the file you want to plot ===
-filename = "h2_bbr_162ms.txt"
+# === Settings ===
+filename = "h1_vegs_81ms.txt"
 flow_label = "TCP Flow 1 (h1 → r1)"
+time_limit = 2000  # <<< Edit this number to change how many seconds you want to display
 
 # === Parse iperf3 output ===
 time = []
@@ -21,28 +22,30 @@ with open(filename, "r") as file:
             except:
                 continue
 
+# === Apply time limit ===
+filtered_time = []
+filtered_throughput = []
 
-
+for t, r in zip(time, throughput):
+    if t <= time_limit:
+        filtered_time.append(t)
+        filtered_throughput.append(r)
+    else:
+        break
 
 # === Plot the data ===
-plt.figure(figsize=(10, 5))
+plt.figure(figsize=(12, 4))  # Wide view
 
+plt.plot(filtered_time, filtered_throughput, label=flow_label, color='green', linewidth=1)
 
-
-
-
-# Styled line: thin, dashed, green
-plt.plot(time, throughput, label=flow_label, color='green', linestyle='-', linewidth=1, marker='.')
 plt.xlabel("Time (seconds)", fontsize=12)
 plt.ylabel("Throughput (Mbits/sec)", fontsize=12)
-plt.title(f"Throughput vs Time: {filename}", fontsize=14, fontweight='bold')
+plt.title(f"Throughput vs Time (First {time_limit}s): {filename}", fontsize=14, fontweight='bold')
 plt.grid(True, linestyle='--', alpha=0.6)
 plt.legend()
 plt.tight_layout()
 
-# Save the plot
-save_name = filename.replace(".txt", ".png")
+# Save and show
+save_name = filename.replace(".txt", f"_first{time_limit}s.png")
 plt.savefig(save_name, dpi=300)
-
-# Show the plot
 plt.show()
