@@ -1995,4 +1995,13 @@ Connecting to host 10.0.0.3, port 5201
 [  5] 1991.00-1992.00 sec  1.00 MBytes  8.38 Mbits/sec    0    198 KBytes       
 [  5] 1992.00-1993.00 sec   896 KBytes  7.34 Mbits/sec    0    198 KBytes       
 [  5] 1993.00-1994.00 sec  1.88 MBytes  15.7 Mbits/sec    0    198 KBytes       
-[  5] 1994.00-1995.00 sec   896 KBytes  7.34 Mbits/sec    0  
+[  5] 1994.00-1995.00 sec   896 KBytes  7.34 Mbits/sec    0    198 KBytes       
+[  5] 1995.00-1996.00 sec  1.00 MBytes  8.38 Mbits/sec    0    198 KBytes       
+[  5] 1996.00-1997.00 sec   896 KBytes  7.34 Mbits/sec    0    198 KBytes       
+[  5] 1997.00-1998.00 sec  1.88 MBytes  15.7 Mbits/sec    0    198 KBytes       
+[  5] 1998.00-1999.00 sec  1.00 MBytes  8.39 Mbits/sec    0    198 KBytes       
+[  5] 2000.01-2495.09 sec  0.00 Bytes  0.00 bits/sec    0    197 KBytes       
+- - - - - - - - - - - - - - - - - - - - - - - - -
+[ ID] Interval           Transfer     Bitrate         Retr
+[  5]   0.00-2495.09 sec  2.23 GBytes  7.67 Mbits/sec   58             sender
+[  5]   0.00-2495.09 sec  0.00 Bytes  0.00 bits/sec                  receiver

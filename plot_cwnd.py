@@ -1,8 +1,20 @@
 import matplotlib.pyplot as plt
+import os
 
 # === Edit these to match your file names ===
-h1_file = "h1_vegs_81ms.txt"
-h2_file = "h2_vegas_81ms.txt"
+h1_file = "src1_reno_rtt_42ms.txt"
+h2_file = "src2_reno_rtt_42ms.txt"
+
+# === Extract info from file name ===
+def extract_plot_info(filename):
+    base = os.path.basename(filename)
+    parts = base.replace(".txt", "").split("_")
+    if len(parts) >= 4:
+        _, algo, mode, rtt = parts
+        return algo.upper(), mode.capitalize(), rtt
+    return "Unknown", "Unknown", "Unknown"
+
+algo, mode, rtt = extract_plot_info(h1_file)
 
 # === Function to extract time and CWND from iperf3 output ===
 def parse_cwnd(filename):
@@ -37,23 +49,33 @@ def parse_cwnd(filename):
 t1, cwnd1 = parse_cwnd(h1_file)
 t2, cwnd2 = parse_cwnd(h2_file)
 
+# === Shift Flow 2's start time by 250 seconds ===
+t2 = [t + 250 for t in t2]
+
 # === Plot setup ===
 plt.figure(figsize=(12, 6))
-plt.plot(t1, cwnd1, label="TCP Flow 1 (h1 → r1)", color='blue',
-         linewidth=1, marker='o', markersize=4, markerfacecolor='none', alpha=0.7, linestyle='-')
-plt.plot(t2, cwnd2, label="TCP Flow 2 (h2 → r2)", color='orange',
-         linewidth=1, marker='s', markersize=4, markerfacecolor='none', alpha=0.7, linestyle='-')
 
-plt.title("CWND vs Time for Two TCP Flows (vegas - 81ms)", fontsize=14, fontweight='bold')
+# Use clean line plots (no markers)
+plt.plot(t1, cwnd1, label="TCP Flow 1 (src1 → rcv1)", color='blue', linewidth=1)
+plt.plot(t2, cwnd2, label="TCP Flow 2 (src2 → rcv2)", color='orange', linewidth=1)
+
+# Title and labels
+plt.title(f"{algo} - Congestion Window vs Time ({mode}, RTT={rtt})", fontsize=14, fontweight='bold')
 plt.xlabel("Time (seconds)", fontsize=12)
 plt.ylabel("Congestion Window (packets)", fontsize=12)
-plt.grid(True, linestyle='--', alpha=0.3)
-plt.legend()
+plt.grid(True, linestyle='--', alpha=0.4)
+plt.legend(loc='upper right')
 plt.tight_layout()
 
-# Set axis limits with a little headroom
+# Axis limits
 plt.xlim(0, max(max(t1, default=0), max(t2, default=0)) + 50)
 plt.ylim(0, max(max(cwnd1, default=0), max(cwnd2, default=0)) + 500)
 
-plt.savefig("cwnd_vegas_81ms_clearer.png", dpi=300)
+# Optional figure caption
+plt.figtext(0.5, -0.04,
+            f"Figure: Change in Congestion Window (packets) vs Time for two TCP flows using {algo} ({mode.lower()}, RTT = {rtt})",
+            wrap=True, horizontalalignment='center', fontsize=10, style='italic')
+
+# Save and show
+plt.savefig(f"cwnd_{algo.lower()}_{mode.lower()}_{rtt}.png", dpi=300, bbox_inches='tight')
 plt.show()
