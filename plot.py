@@ -3,9 +3,15 @@ import os
 
 
 
-filename = "src1_vegas_rtt_42ms.txt"  # <<< Edit this for your target file
+
+
+
+filename = "src2_cubic_rtt_324ms.txt"  # <<< Edit this for your target file
 flow_label = "TCP Flow 2 (src2 → rcv2)"
 time_limit = 2000  # Display up to this time (in seconds)
+
+
+
 
 def extract_info(filename):
     base = os.path.basename(filename).replace(".txt", "")
@@ -14,6 +20,10 @@ def extract_info(filename):
         _, algo, mode, rtt = parts
         return algo.upper(), mode.capitalize(), rtt
     return "UNKNOWN", "Unknown", "??ms"
+
+
+
+
 
 algo, mode, rtt = extract_info(filename)
 # === Parse iperf3 output ===

@@ -10,20 +10,28 @@ DURATION = 2000
 DELAY_SECOND_FLOW = 250
 FAIRNESS_DURATION = 1000
 
+
+
 # === SELECT ALGORITHMS ===
 ALGORITHMS = [
     # 'reno',
-    # 'cubic',
-    #  'bbr',
-       'vegas'
+    'cubic',
+    # 'bbr',
+    # 'vegas'
 ]
+
+
 
 # === SELECT BACKBONE DELAYS (in ms) ===
 DELAYS = [
-    21,     # RTT = 42ms
-    # 81,    # RTT = 162ms
-    # 162    # RTT = 324ms
+    # 21,     # RTT = 42ms
+    #  81,    # RTT = 162ms
+     162    # RTT = 324ms
 ]
+
+
+
+
 
 # === Topology Definition ===
 class DumbbellTopo(Topo):

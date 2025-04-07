@@ -1,0 +1,6 @@
+Connecting to host 10.0.0.2, port 5202
+[  5] local 10.0.0.4 port 46056 connected to 10.0.0.2 port 5202
+[ ID] Interval           Transfer     Bitrate         Retr  Cwnd
+[  5]   0.00-1.00   sec   256 KBytes  2.09 Mbits/sec    0   56.6 KBytes       
+[ ID] Interval           Transfer     Bitrate         Retr  Cwnd
+[  5]   0.00-1.00   sec   256 KBytes  2.09 Mbits/sec    0   56.6 KBytes       
