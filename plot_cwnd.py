@@ -2,8 +2,8 @@ import matplotlib.pyplot as plt
 import os
 
 # === Edit these to match your file names ===
-h1_file = "src1_reno_rtt_42ms.txt"
-h2_file = "src2_reno_rtt_42ms.txt"
+h1_file = "src1_vegas_rtt_42ms.txt"
+h2_file = "src2_vegas_rtt_42ms.txt"
 
 # === Extract info from file name ===
 def extract_plot_info(filename):

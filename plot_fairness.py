@@ -3,8 +3,8 @@ import re
 import os
 
 # === Log files ===
-flow1_file = "src1_reno_fairness_42ms.txt"
-flow2_file = "src2_reno_fairness_42ms.txt"
+flow1_file = "src1_vegas_fairness_42ms.txt"
+flow2_file = "src2_vegas_fairness_42ms.txt"
 
 # === Parameters ===
 max_seconds = 2000

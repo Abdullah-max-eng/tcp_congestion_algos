@@ -3,7 +3,7 @@ import os
 
 
 
-filename = "src1_cubic_fairness_42ms.txt"  # <<< Edit this for your target file
+filename = "src1_vegas_rtt_42ms.txt"  # <<< Edit this for your target file
 flow_label = "TCP Flow 2 (src2 → rcv2)"
 time_limit = 2000  # Display up to this time (in seconds)
 

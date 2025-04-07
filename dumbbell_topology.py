@@ -13,9 +13,9 @@ FAIRNESS_DURATION = 1000
 # === SELECT ALGORITHMS ===
 ALGORITHMS = [
     # 'reno',
-    'cubic',
-    # 'bbr',
-    # 'vegas'
+    # 'cubic',
+    #  'bbr',
+       'vegas'
 ]
 
 # === SELECT BACKBONE DELAYS (in ms) ===
@@ -114,7 +114,7 @@ def main():
 
     for algorithm in ALGORITHMS:
         for delay in DELAYS:
-            # run_experiment(DURATION, delay, algorithm, fairness=False)
+            run_experiment(DURATION, delay, algorithm, fairness=False)
             run_experiment(FAIRNESS_DURATION, delay, algorithm, fairness=True)
 
     print("\nAll experiments completed.")
